@@ -198,6 +198,18 @@
         "group_name": "cloud"
     },
     {
+        "default": "t2.micro",
+        "description": "Instance type for the virtual machine",
+        "hidden": false,
+        "immutable": false,
+        "label": "DB instance class",
+        "name": "instance_type",
+        "required": true,
+        "secured": false,
+        "type": "string",
+        "group_name": "virtualmachine"
+    },
+    {
         "default": "lampPhp",
         "description": "The hostname of server with php; Allow 1 to 255 alphanumeric characters and special characters +=._:/@- as tag value that is not starting with aws",
         "hidden": false,
@@ -233,7 +245,6 @@
         "required": true,
         "secured": false,
         "type": "string",
-        "regex": "^[A-Za-z0-9]{1,64}$",
         "group_name": "database"
     },
     {
