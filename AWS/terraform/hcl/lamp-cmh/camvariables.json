@@ -202,7 +202,7 @@
         "description": "Instance type for the virtual machine",
         "hidden": false,
         "immutable": false,
-        "label": "DB instance class",
+        "label": "VM Instance Type",
         "name": "instance_type",
         "required": true,
         "secured": false,
@@ -245,6 +245,19 @@
         "required": true,
         "secured": false,
         "type": "string",
+        "group_name": "database"
+    },
+    {
+        "default": "lampdb1",
+        "description": "DB Identifier",
+        "hidden": false,
+        "immutable": false,
+        "label": "DB identifier",
+        "name": "db_identifier",
+        "required": false,
+        "secured": false,
+        "type": "string",
+        "regex": "^[A-Za-z0-9]{1,8}$",
         "group_name": "database"
     },
     {

@@ -103,6 +103,11 @@ variable "db_instance_class" {
   default     = "db.t2.micro"
 }
 
+variable "db_identifier" {
+  description = "DB Identifier"
+  default     = "lampdb-1"
+}
+
 
 #########################################################
 # Build network
@@ -382,7 +387,7 @@ resource "aws_db_instance" "mysql" {
   instance_class         = "db.t2.micro"
   instance_class         = "${var.db_instance_class}"
   name                   = "${var.db_instance_name}"
-#  identifier             = "${var.db_instance_name}"
+  identifier             = "${var.db_identifier}"
   username               = "${var.cam_user}"
   password               = "${var.cam_pwd}"
   db_subnet_group_name   = "${aws_db_subnet_group.default.name}"
