@@ -382,6 +382,7 @@ resource "aws_db_instance" "mysql" {
   instance_class         = "db.t2.micro"
   instance_class         = "${var.db_instance_class}"
   name                   = "${var.db_instance_name}"
+  identifier             = "${var.db_instance_name}"
   username               = "${var.cam_user}"
   password               = "${var.cam_pwd}"
   db_subnet_group_name   = "${aws_db_subnet_group.default.name}"
@@ -541,6 +542,10 @@ EOF
 #########################################################
 output "aws_php_address" {
   value = "http://${aws_instance.php_server.public_ip}/test.php"
+}
+
+output "aws_vm_ip_address" {
+  value = "${aws_instance.php_server.public_ip}"
 }
 
 output "mysql_address" {

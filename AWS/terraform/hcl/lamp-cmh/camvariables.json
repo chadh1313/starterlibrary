@@ -320,11 +320,18 @@
       "secured": false
     },
     {
+      "name": "aws_vm_ip_address",
+      "type": "string",
+      "hidden": false,
+      "label": "AWS VM Public IP address",
+      "secured": false
+    },
+    {
         "name": "mysql_address",
         "type": "string",
         "hidden": false,
         "label": "MySQL address",
         "secured": false
-      }
+    }
   ]
 }
